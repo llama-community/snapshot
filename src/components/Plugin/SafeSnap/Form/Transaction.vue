@@ -50,6 +50,13 @@
       :config="config"
       @update:modelValue="$emit('update:modelValue', $event)"
     />
+
+    <hr />
+    <PluginSafeSnapFormLlamaCategory
+      :config="config"
+      :modelValue="modelValue"
+      @update:modelValue="$emit('update:modelValue', $event)"
+    />
   </UiCollapsible>
 </template>
 

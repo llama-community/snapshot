@@ -48,7 +48,8 @@ export default {
       this.transactions.push(undefined);
     },
     updateTransaction(index, transaction) {
-      this.transactions[index] = transaction;
+      const oldTransaction = this.transactions[index];
+      this.transactions[index] = { ...oldTransaction, ...transaction };
       this.$emit('update:modelValue', this.transactions);
     },
     removeTransaction(index) {
